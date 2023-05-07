@@ -8,6 +8,7 @@ export default function TodoList({ todos, setTodos }) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: "bananahammock",
         },
         body: JSON.stringify({
           title: title,
@@ -33,6 +34,7 @@ export default function TodoList({ todos, setTodos }) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: "bananahammock",
         },
         body: JSON.stringify({
           completed: completed,
@@ -55,6 +57,9 @@ export default function TodoList({ todos, setTodos }) {
     (async () => {
       await fetch(`http://localhost:3000/todo/${id}`, {
         method: "DELETE",
+        headers: {
+          Authorization: "bananahammock",
+        },
       });
     })();
 

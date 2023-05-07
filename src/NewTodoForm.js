@@ -10,6 +10,7 @@ export default function NewTodoForm({ setTodos }) {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: "bananahammock",
         },
         body: JSON.stringify({
           id: crypto.randomUUID(),
